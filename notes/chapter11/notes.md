@@ -114,3 +114,24 @@ grep -n 'g.*g' regular_express.txt
 grep -n '[0-9][0-9]*' regular_express.txt
 ```
 
+### 例题5 `{}`用于表示限定连续字符数
+
+任务1 从文件`regular_express.txt`中查找包含连续两个字符`o`的行。
+指令：
+```
+grep -n 'o\{2\}' regular_express.txt
+```
+
+任务2 从文件`regular_express.txt`中查找包含`g后跟2到5个o再接一个g的字符串`的行。
+指令：
+```
+grep -n 'go\{2,5\}g' regular_express.txt
+```
+
+任务3 从文件`regular_express.txt`中查找包含`2个o以上的goooo...g`的行。
+指令：
+```
+grep -n 'go\{2,\}g' regular_express.txt
+```
+
+
