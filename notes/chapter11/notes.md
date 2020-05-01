@@ -47,4 +47,28 @@ grep -n '[^a-z]oo' regular_express.txt
 grep -n '[0-9]' regular_express.txt
 ```
 
+### 例题3 行首字符`^`和行尾字符`$`
+任务1：从文件`regular_express.txt`中查找行首包含字符串`the`的行。
+指令：
+```
+grep -n '^the' regular_express.txt
+```
+
+任务2：从文件`regular_express.txt`中查找行首是小写字符的行。
+指令：
+```
+grep -n '^[a-z]' regular_express.txt
+```
+
+任务3：从文件`regular_express.txt`中查找行首不是英文字符的行。
+指令：
+```
+grep -n '^[^a-zA-Z]' regular_express.txt
+```
+
+任务4：从文件`regular_express.txt`中查找以小数点`.`结尾的行。
+指令：
+```
+grep -n '\.$' regular_express.txt
+```
 
