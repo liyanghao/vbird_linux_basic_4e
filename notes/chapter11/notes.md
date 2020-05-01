@@ -16,7 +16,7 @@ grep -vn 'the' regular_express.txt
 grep -in 'the' regular_express.txt
 ```
 
-### 例题2 利用中括号`[]`来查找集合字符串
+### 例题2 中括号`[]`表示集合字符
 任务1：从文件`regular_express.txt`中查找包含字符串`test`或者`taste`的行。
 指令：
 ```
@@ -70,5 +70,47 @@ grep -n '^[^a-zA-Z]' regular_express.txt
 指令：
 ```
 grep -n '\.$' regular_express.txt
+```
+
+### 例题4 `.`表示任意一个字符，`*`表示有重复字符
+
+任务1 从文件`regular_express.txt`中查找包含字符串`g???d`的行。
+指令：
+```
+grep -n 'g..d' regular_express.txt
+```
+
+任务2 从文件`regular_express.txt`中查找包含字符串`oo`或者`ooo`或者`oooo`的行。
+指令：
+```
+grep -n 'o*' regular_express.txt
+```
+解释：
+- `o*`：表示空字符串或者至少包含一个字符o
+
+任务3 从文件`regular_express.txt`中查找包含至少两个以上字符`o`的行。
+指令：
+```
+grep -n 'ooo*' regular_express.txt
+```
+
+任务4 从文件`regular_express.txt`中查找包含`gog`、`goog`、`gooog`的行。
+指令：
+```
+grep -n 'goo*g' regular_express.txt
+```
+任务5 从文件`regular_express.txt`中查找包含开头结尾都是字符`g`、中间字符可有可无的行。
+指令：
+```
+grep -n 'g.*g' regular_express.txt
+```
+解释：
+- `.*`：表示零个或者多个任意字符
+
+
+任务6 从文件`regular_express.txt`中查找包含任意数字的行。
+指令：
+```
+grep -n '[0-9][0-9]*' regular_express.txt
 ```
 
